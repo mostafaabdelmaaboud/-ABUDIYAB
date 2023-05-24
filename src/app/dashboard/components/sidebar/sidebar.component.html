@@ -1,0 +1,95 @@
+<div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
+  <div class="header position-relative">
+
+    <div class="logo title">
+      <img src="assets/logo-edited-png24.png" width="42px" height="42px" alt="">
+    </div>
+    <ul class="list-unstyled points p-0">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <div class="toggle d-flex justify-content-center align-items-center" (click)="handleSidebarToggle()">
+      <i class="fa-solid fa-angles-left"></i>
+    </div>
+  </div>
+  <div class="container-nav">
+    <div class="content ">
+      <div class="link active position-relative">
+        <div class="content-link">
+          <div class="icon house">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <div class="title">الرئيسية</div>
+        </div>
+
+      </div>
+      <div class="link position-relative">
+        <div class="content-link ">
+          <div class="icon">
+            <i class="fa-solid fa-folder-minus"></i>
+          </div>
+          <div class="title"> الملفات الرئيسية</div>
+        </div>
+
+      </div>
+      <div class="link position-relative">
+        <div class="content-link">
+          <div class="icon">
+            <i class="fa-solid fa-folder-minus"></i>
+          </div>
+          <div class="title">ملفات الارقام</div>
+        </div>
+
+      </div>
+      <div class="link position-relative">
+        <div class="content-link ">
+          <div class="icon">
+            <i class="fa-solid fa-clipboard-question"></i>
+          </div>
+          <div class="title">الاستعلامات</div>
+        </div>
+
+      </div>
+      <div class="link position-relative">
+        <div class="content-link ">
+          <div class="icon">
+            <i class="fa-solid fa-square-share-nodes"></i>
+          </div>
+          <div class="title">التقارير</div>
+        </div>
+
+      </div>
+      <div class="link position-relative">
+        <div class="content-link ">
+          <div class="icon">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <div class="title">النظام</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="line"></div>
+
+    <div class="footer position-relative">
+      <ul class="list-unstyled points p-0">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <ul class="list-unstyled chooseColor p-0 m-0">
+        <li class="li-circule-color yellow"></li>
+        <li class="li-circule-color red"></li>
+
+        <li class="li-circule-color blue"></li>
+
+        <li class="li-circule-color LightBlue"></li>
+
+      </ul>
+      <div class="darkSquare"></div>
+
+    </div>
+  </div>
+
+</div>
