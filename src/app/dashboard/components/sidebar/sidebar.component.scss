@@ -1,70 +1,24 @@
-$BrownColor: #3D5653;
-$LightBrownColour: #4A6D69;
-$Goldenrod: #D6A218;
-$OffWhite: #F6F9F8;
-$yellow: #F8D65E;
-$red: #FF4B4B;
-$blue: #5458F7;
-$LightBlue: #62D2FF;
-
-.chevron::before {
-  border-style: solid;
-  border-width: 0.15em 0.15em 0 0;
-  content: "";
-  display: inline-block;
-  height: 0.35em;
-  left: 0.15em;
-  position: relative;
-  top: 0.3em;
-  vertical-align: top;
-  width: 0.35em;
-}
-
-
-
-@keyframes linkFrames {
-  0% {
-    overflow: hidden;
-    width: 0;
-  }
-
-  100% {
-    overflow: visible;
-    width: 100%;
-  }
-}
-
-@keyframes titleFrames {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
+/* Start asidebar */
 .container-nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: scroll;
   height: calc(100vh - 63px);
-  // direction: ltr;
   overflow-y: auto;
   overflow-x: hidden;
 
   .line {
-    height: 50px;
-    width: 2px;
+    height: 35px;
+    width: 1px;
     background-color: black;
     margin: auto;
+    min-height: 35px;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 
+  // Custom Scrollbar
   &::-webkit-scrollbar {
     width: 5px;
   }
@@ -75,7 +29,6 @@ $LightBlue: #62D2FF;
 
   &::-webkit-scrollbar-thumb {
     background-color: #242c2b;
-    // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
 
   .footer {
@@ -83,7 +36,6 @@ $LightBlue: #62D2FF;
     padding-top: 35px;
 
     .points {
-
       margin: 0;
       text-align: center;
     }
@@ -101,7 +53,6 @@ $LightBlue: #62D2FF;
     .li-circule-color {
       width: 16px;
       height: 16px;
-      background-color: white;
       margin: auto;
       cursor: pointer;
       border-radius: 50%;
@@ -113,36 +64,15 @@ $LightBlue: #62D2FF;
       &:not(:last-of-type) {
         margin-bottom: 6px;
       }
-
-      &.yellow {
-        background-color: $yellow;
-      }
-
-      &.red {
-        background-color: $red;
-      }
-
-      &.blue {
-        background-color: $blue;
-      }
-
-      &.LightBlue {
-        background-color: $LightBlue;
-      }
-
     }
   }
 }
-
-
 
 .sidebar {
   position: fixed;
   right: 0;
   top: 0;
-
   height: 100vh;
-  transition: 0.3s;
   z-index: 1;
   width: 90px;
 
@@ -196,7 +126,6 @@ $LightBlue: #62D2FF;
     }
   }
 
-  background: $BrownColor;
   color: white;
 
   .header {
@@ -204,14 +133,11 @@ $LightBlue: #62D2FF;
     align-items: center;
     justify-content: flex-start;
     padding: 10px;
-    background: $BrownColor;
 
     .logo {
       font-size: 20px;
       margin: 0;
     }
-
-
 
     .toggle {
       width: 39px;
@@ -219,35 +145,9 @@ $LightBlue: #62D2FF;
       position: absolute;
       left: -39px;
       top: 10px;
-      background: $LightBrownColour;
       cursor: pointer;
       border-radius: 10px 0 0 10px;
       font-size: 30px;
-
-      i {
-        transition: all .3s ease-in;
-        -webkit-transition: all .3s ease-in;
-        -moz-transition: all .3s ease-in;
-        -ms-transition: all .3s ease-in;
-        -o-transition: all .3s ease-in;
-      }
-
-    }
-
-    .chevron {
-
-      color: #6d6e7e;
-      cursor: pointer;
-      transition: 0.3s;
-
-      &::before {
-        transition: 0.3s;
-        transform: rotate(45deg);
-      }
-
-      &:hover {
-        color: white;
-      }
     }
   }
 
@@ -265,14 +165,7 @@ $LightBlue: #62D2FF;
         background-color: rgba(72, 116, 111, 1.5);
       }
 
-
       padding: 6px 0;
-
-      transition: all .3s ease;
-      -webkit-transition:all .3s ease;
-      -moz-transition:all .3s ease;
-      -ms-transition:all .3s ease;
-      -o-transition:all .3s ease;
 
       &:not(:last-of-type) {
         margin-bottom: 20px;
@@ -285,43 +178,29 @@ $LightBlue: #62D2FF;
         align-items: center;
         width: 90px;
 
-
-
         .icon {
           border-radius: 5px;
           text-align: center;
           line-height: 29px;
           font-size: 1.5rem;
-          color: $Goldenrod;
 
           &.house {
             width: 32px;
             height: 32px;
             font-size: 1.1rem;
-            background-color: $Goldenrod;
             color: white;
           }
-
-
         }
 
         .title {
-          color: $OffWhite;
-          transition: 0.3s;
           overflow: hidden;
           font-size: .7rem;
           margin-top: 8px;
         }
-
-        transition: all .4s ease;
-        -webkit-transition: all .4s ease;
-        -moz-transition: all .4s ease;
-        -ms-transition: all .4s ease;
-        -o-transition: all .4s ease;
       }
-
     }
   }
+
 }
 
 .points {
@@ -330,9 +209,6 @@ $LightBlue: #62D2FF;
   top: 12px;
 
   li {
-
-
-    background-color: $Goldenrod;
     width: 4px;
     height: 4px;
     border-radius: 50%;
@@ -343,3 +219,5 @@ $LightBlue: #62D2FF;
     margin-bottom: 3px;
   }
 }
+
+/* End asidebar */

@@ -10,7 +10,8 @@ import { LayoutComponent } from './components/layout/layout.component';
 @NgModule({
   declarations: [
     LayoutComponent,
-    SidebarComponent
+    SidebarComponent,
+
   ],
   imports: [
     CommonModule,

@@ -1,27 +1,25 @@
 <div class="layout">
-  <app-sidebar [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-sidebar>
-
-  <div class="dashboard content" [ngClass]="{ 'sidebarExpanded': sidebarExpanded }">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <app-sidebar class="main-sidebar" [isExpanded]="sidebarExpanded"
+    (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-sidebar>
+  <div class="dashboard content-header" [ngClass]="{ 'sidebarExpanded': sidebarExpanded }">
+    <!-- Start navbar-->
+    <nav class="navbar navbar-layout navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse " #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
-
+        <div class="collapse navbar-collapse navbar-collapse-layout" #collapse="ngbCollapse"
+          [(ngbCollapse)]="isCollapsed">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <app-sidebar class="modile-sidebar d-none" [isExpanded]="sidebarExpanded"
+              <app-sidebar class="small-device-sidebar d-none" [isExpanded]="sidebarExpanded"
                 (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-sidebar>
             </li>
-
             <li class="nav-item li-item">
-              <form class="d-flex">
-                <button class="btn btn-outline-success" type="submit"><i
-                    class="fa-solid fa-magnifying-glass"></i></button>
-
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <form class="d-flex form-hide-width">
+                <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input class="form-control search-header" type="search" placeholder="Search" aria-label="Search">
               </form>
             </li>
             <li class="nav-item li-item">
@@ -32,16 +30,29 @@
               </a>
             </li>
             <li class="nav-item li-item">
-
               <a class="nav-link icon-header" href="#">
                 <span class="number-icon">1</span>
                 <i class="fa-solid fa-envelope"></i>
               </a>
-
           </ul>
-
         </div>
       </div>
     </nav>
+    <!-- End navbar-->
+    <!-- Start body-->
+    <div class="body">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">الصفحه الرئيسيه</a></li>
+          <li class="breadcrumb-item" aria-current="page"> <a href="#">عرض جميع العقود</a></li>
+          <li class="breadcrumb-item active" aria-current="page"> <a href="#">بيانات العقد</a></li>
+        </ol>
+      </nav>
+      <router-outlet></router-outlet>
+
+    </div>
+
+    <!-- End body-->
+
   </div>
 </div>
