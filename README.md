@@ -10,7 +10,7 @@ Install Angular CLI globally by running the following command:
 Once the installation is complete, verify that Angular CLI is installed and check the version by running the following command:
 # ng version
 Change to the project directory:
-# ng version cd ABUDIYAB
+# cd ABUDIYAB
 Install the project dependencies by running the following command:
 # npm install
 Serve the application locally by running the following command:
